@@ -27,9 +27,12 @@ class DefaultController extends AbstractController
         $operations = [];
 
         $categorieRepository = $entityManager->getRepository(Categorie::class);
+        $operationRepository = $entityManager->getRepository(Operation::class);
+
         $categories = $categorieRepository->findAll();
         foreach ($categories as $category) {
-            $operations[$category->getTitre()] = $category->getOperations();
+
+            $operations[$category->getTitre()] = $operationRepository->findByCategorie($category);
         }
 
 

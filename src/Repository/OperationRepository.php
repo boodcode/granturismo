@@ -39,20 +39,23 @@ class OperationRepository extends ServiceEntityRepository
         }
     }
 
-//    /**
-//     * @return Operation[] Returns an array of Operation objects
-//     */
-//    public function findByExampleField($value): array
-//    {
-//        return $this->createQueryBuilder('o')
-//            ->andWhere('o.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->orderBy('o.id', 'ASC')
-//            ->setMaxResults(10)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-//    }
+    /**
+     * @return Operation[] Returns an array of Operation objects
+     */
+    public function findByCategorie($value): array
+    {
+
+        return $this->createQueryBuilder('o')
+            ->andWhere('o.categorie = :val')
+            ->setParameter('val', $value)
+            ->andWhere('o.date_fin >= :today')
+            ->setParameter('today', new \DateTimeImmutable())
+            ->orderBy('o.id', 'ASC')
+            ->setMaxResults(12)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
 
 //    public function findOneBySomeField($value): ?Operation
 //    {
