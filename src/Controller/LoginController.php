@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
+use App\Validator\Constraints\ConstraintsPassword;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -16,9 +18,9 @@ class LoginController extends AbstractController
         // get the login error if there is one
         $error = $authenticationUtils->getLastAuthenticationError();
 
+
         // last username entered by the user
         $lastUsername = $authenticationUtils->getLastUsername();
-
 
         return $this->render('login/index.html.twig', [
             'controller_name' => 'LoginController',
@@ -26,4 +28,5 @@ class LoginController extends AbstractController
             'error'         => $error,
         ]);
     }
+
 }
