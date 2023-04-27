@@ -14,7 +14,7 @@
                       </span>
                       <span>Accueil</span>
                     </span>
-                </a>&nbsp; > &nbsp;{{ ope.categorie }} | <strong>{{ ope.titre }}</strong></small>
+                </a>&nbsp; > &nbsp;{{ ope.categorie }} > <strong>{{ ope.titre }}</strong></small>
             <figure class="cover">
                 <img src="{{ asset(image_dir ~ 'operations/' ~ ope.visuel) | imagine_filter('operation_cover')  }}"alt="{{ ope.titre }}"/>
             </figure>
@@ -58,7 +58,11 @@
                     <div class="outil">
                         <div class="slide">
                             <figure>
+                                {% if outil.visuel %}
                                 <img src="{{ asset(image_dir ~ 'outils/' ~ outil.visuel) | imagine_filter('slide')  }}"  alt="{{ outil.titre }}"/>
+                                {% else %}
+                                <img src="{{ asset(image_dir ~ 'operations/' ~ ope.visuel) | imagine_filter('slide')  }}"  alt="{{ outil.titre }}"/>
+                                {% endif %}
                             </figure>
                         </div>
 
