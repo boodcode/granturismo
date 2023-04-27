@@ -5,4 +5,9 @@
  * (and its CSS file) in your base layout (base.html.twig).
  */
 
-
+document.querySelector('a.file').addEventListener('click', (e) => {
+  gtag('event', 'download', {
+    'user': e.currentTarget.dataset.user,
+    'operation': e.currentTarget.dataset.operation
+  });
+})
