@@ -1,0 +1,75 @@
+{# app/Resources/views/index.html.twig #}
+
+{% extends 'base.html.twig' %}
+{%  set bodyClass = 'operation' %}
+{% block body %}
+
+    <section class="operation">
+        <div class="container">
+            <small>
+                <a href="/">
+                    <span class="icon-text">
+                      <span class="icon">
+                        <ion-icon name="home-sharp"></ion-icon>
+                      </span>
+                      <span>Accueil</span>
+                    </span>
+                </a>&nbsp; > &nbsp;{{ ope.categorie }} | <strong>{{ ope.titre }}</strong></small>
+            <figure class="cover">
+                <img src="{{ asset(image_dir ~ 'operations/' ~ ope.visuel) | imagine_filter('operation_cover')  }}"alt="{{ ope.titre }}"/>
+            </figure>
+            <div class="operation">
+                <div class="desc">
+                    <h1>{{ ope.titre }}</h1>
+                    <div class="description">{{ ope.description | raw }}</div>
+                </div>
+                <div class="bloc">
+                    <div class="title_dates">
+                        <div class="dates">
+                            du<br>{{ ope.dateDebut|date('d/m') }}<br>
+                            au<br>{{ ope.dateFin|date('d/m') }}
+                        </div>
+
+                    </div>
+                    <div class="marques">
+                        {% for marque in ope.marques %}
+                            <figure class="logo">
+                                <img src="{{ asset(image_dir ~ 'marques/' ~ marque.logo)   }}"alt="{{ marque.nom }}"/>
+                            </figure>
+                        {% endfor %}
+                    </div>
+                    {% if ope.globalZip %}
+                    <a class="file" href="{{ asset(files_dir) ~ ope.uploadTimestamp|date('Ymd') ~ '/' ~ ope.globalZip }}" target="_blank" download>
+                        <span class="icon-text">
+                          <span class="icon">
+                            <ion-icon name="download-outline"></ion-icon>
+                          </span>
+                            <span>Téléchargez tous les outils</span>
+                        </span>
+                    </a>
+                    {%  endif %}
+                </div>
+
+            </div>
+
+
+            <div class="outils">
+                {% for outil in ope.outils %}
+                    <div class="outil">
+                        <div class="slide">
+                            <figure>
+                                <img src="{{ asset(image_dir ~ 'outils/' ~ outil.visuel) | imagine_filter('slide')  }}"  alt="{{ outil.titre }}"/>
+                            </figure>
+                        </div>
+
+                        <div class="content">
+                            <h3>{{ outil.titre }}</h3>
+                            <div>{{ outil.description | raw}}</div>
+                        </div>
+
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

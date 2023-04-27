@@ -1,0 +1,46 @@
+vich_uploader:
+  db_driver: orm
+
+  metadata:
+    type: attibute
+
+  mappings:
+      zipFile:
+          uri_prefix: /uploads/files/
+          upload_destination: '%kernel.project_dir%/public/uploads/files'
+          directory_namer:
+              service: Vich\UploaderBundle\Naming\CurrentDateTimeDirectoryNamer
+              options:
+                  date_time_format: 'Ymd' # will create directory "20180923" for current date "2018-09-23"
+                  date_time_property: uploadTimestamp # see above example
+          namer: Vich\UploaderBundle\Naming\OrignameNamer
+          inject_on_load: false
+          delete_on_update: true
+          delete_on_remove: true
+
+      operation_visuel:
+          uri_prefix: /uploads/images/operations
+          upload_destination: '%kernel.project_dir%/public/uploads/images/operations'
+          namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+
+          inject_on_load: false
+          delete_on_update: true
+          delete_on_remove: true
+
+      outil_visuel:
+        uri_prefix: /uploads/images/outils
+        upload_destination: '%kernel.project_dir%/public/uploads/images/outils'
+        namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+
+        inject_on_load: false
+        delete_on_update: true
+        delete_on_remove: true
+
+      marque_logo:
+        uri_prefix: /uploads/images/marques
+        upload_destination: '%kernel.project_dir%/public/uploads/images/marques'
+        namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+
+        inject_on_load: false
+        delete_on_update: true
+        delete_on_remove: true

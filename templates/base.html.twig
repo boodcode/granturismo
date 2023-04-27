@@ -2,18 +2,53 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Mopar | Mon Plan d'Actions Commerciales{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
+            <link rel="stylesheet" href="{{ absolute_url(asset('build/Bulma.css')) }}"/>
+            {{ encore_entry_link_tags('Bulma') }}
         {% endblock %}
-
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
-    <body>
-        {% block body %}{% endblock %}
+    <body class="{{ 'page-' ~ bodyClass|default('')}}">
+    {% if app.request.get('_route') != 'app_login' %}
+    <section class="header">
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a href="/">
+                    <figure class="logo-small">
+                        <img src="{{ asset('build/images/logo-258x54@2x.png') }}" alt="mon plan d'actions commerciales">
+                    </figure>
+                </a>
+
+            </div>
+
+            <div class="navbar-end">
+                {% if is_granted('ROLE_USER') %}
+                    <p>{{ app.user.username }}&nbsp; | &nbsp;<a href="/deconnexion">
+                            <span class="icon-text">
+                              <span class="icon">
+                                <ion-icon name="log-out-outline"></ion-icon>
+                              </span>
+                                <span>se déconnecter</span>
+                            </span>
+                        </a></p>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+    {% block body %}{% endblock %}
+    <footer class="footer">
+        <div class="content">
+            <figure class="stellantis"><img src="{{ asset('build/images/stell-logo-blue.svg') }}" alt="stellantis"></figure>
+            <figure class="frise"><img src="{{ asset('build/images/frise-450x58@2x.png') }}" alt="frise" alt=""></figure>
+        </div>
+    </footer>
     </body>
 </html>

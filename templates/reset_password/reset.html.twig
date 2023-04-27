@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+{%  set bodyClass = 'login' %}
+
+{% block title %}Réinitialisation du mot de passe{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="content">
+    <h1>Réinitialisation du mot de passe</h1>
+
+    {{ form_start(resetForm) }}
+        {{ form_row(resetForm.plainPassword) }}
+        <button class="btn btn-primary">Réinitialiser</button>
+    {{ form_end(resetForm) }}
+    </div>
+</div>
+{% endblock %}

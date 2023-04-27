@@ -1,0 +1,47 @@
+liip_imagine:
+  driver: "gd"
+
+  # configure resolvers
+  resolvers:
+    default:
+      web_path: ~
+
+  # your filter sets are defined here
+  filter_sets:
+    cache: ~
+    # the name of the "filter set"
+    slide:
+      format: jpeg
+      quality: 80
+
+      # list of transformations to apply (the "filters")
+      filters:
+
+        # create a thumbnail: set size to 120x90 and use the "outbound" mode
+        # to crop the image when the size ratio of the input differs
+        thumbnail: { size: [ 300, 200 ], mode: outbound }
+
+        # create a 2px black border: center the thumbnail on a black background
+        # 4px larger to create a 2px border around the final image
+        #background: { size: [ 124, 94 ], position: center, color: '#000000' }
+
+    operation_cover:
+      format: jpeg
+      quality: 75
+
+      filters:
+        fixed:
+          width: 1680
+          height: 600
+
+    logo:
+      format: png
+      filters:
+        fixed:
+          width: 50
+          height: 50
+
+
+  twig:
+      mode: "lazy"
+

@@ -1,29 +1,64 @@
 {% extends 'base.html.twig' %}
-
-{% block title %}Hello LoginController!{% endblock %}
+{%  set bodyClass = 'login' %}
+{% block title %}Mopar Mon Plan d'Action Commerciale!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-    {% if error %}
-        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
 
-    <form action="{{ path('app_login') }}" method="post">
-        <label for="username">Email:</label>
-        <input type="text" id="username" name="_username" value="{{ last_username }}">
+    <div class="section">
+        <div class="container center-align">
+            <div class="row center">
+                <div class="col s12 m6 offset-m3 l8 offset-l2">
+                    <img class="" src="{{ asset('build/images/logo-258x54@2x.png') }}" width="258" alt="Mon Plan d'actions commerciales">
+                    <form action="{{ path('app_login') }}" method="post">
+                        {% if error %}
+                            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                        {% endif %}
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="_password">
 
-        {# If you want to control the URL the user is redirected to on success
-        <input type="hidden" name="_target_path" value="/account"> #}
+                        <div class="row flex">
+                            <div class="input-field">
+                                <label for="inputEmail" class="sr-only">Email</label>
+                                <input type="text" id="username" name="_username" value="{{ last_username }}" required autofocus>
+                            </div>
 
-        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                            <div class="input-field">
+                                <label for="inputPassword" class="sr-only">Mot de passe</label>
+                                <input type="password" id="password" name="_password" class="form-control"  required>
+                            </div>
+                        </div>
 
-        <button type="submit">login</button>
-    </form>
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+                        <div class="row">
+                            <div class="col s6 left-align">
+                                <label>
+                                    <input type="checkbox" name="_remember_me" checked/>
+                                    <span><small>Rester connecté</small></span>
+                                </label>
+                            </div>
+                            <div class="col s6 right-align">
+                                <a href="{{ path('app_forgot_password_request') }}"><small>Mot de passe oublié</small></a>
+                            </div>
+                        </div>
+                        <div class="center">
+                            <button class=" btn btn-primary center-align" type="submit">
+                                Connexion
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                {#
+                <div class="row center">
+                    <div class="col s12 m6 offset-m3 l4 offset-l4">
+                        Vous n'êtes pas encore inscrit :<br>
+                        <a class="" href="{{ path('app_register_da') }}">Créer un compte DA</a> | <a class="" href="{{ path('app_register_aa') }}">Créer un compte AA</a>
+                    </div>
+                </div>#}
+            {% endif %}
+        </div>
+    </div>
+
 {% endblock %}

@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+
+// Set your brand colors
+$purple: #8A4D76;
+$pink: #FA7C91;
+$brown: #757763;
+$beige-light: #D0D1CD;
+$beige-lighter: #EFF0EB;
+
+// Update Bulma's global variables
+$family-sans-serif: "Barlow", sans-serif;
+$grey-dark: $brown;
+$grey-light: $beige-light;
+$primary: $purple;
+
+$widescreen-enabled: true;
+$fullhd-enabled: true;
+
+$vert-deau: #dad9a8;
+$orange: #e4aa63;
+$link: $orange;
+
+// Update some of Bulma's component variables
+$body-background-color: $beige-lighter;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+// Import only what you need from Bulma
+@import "~bulma/sass/utilities/_all.sass";
+@import "~bulma/sass/base/_all.sass";
+@import "~bulma/sass/elements/button.sass";
+@import "~bulma/sass/elements/container.sass";
+@import "~bulma/sass/elements/title.sass";
+@import "~bulma/sass/form/_all.sass";
+@import "~bulma/sass/components/navbar.sass";
+@import "~bulma/sass/layout/hero.sass";
+@import "~bulma/sass/layout/section.sass";
+
+@import "assets/styles/global.scss";
+@import "assets/styles/pages.scss";
+
+
