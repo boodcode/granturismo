@@ -5,9 +5,13 @@ namespace App\Controller\Admin;
 use App\Entity\Operation;
 use App\Entity\Marque;
 use Doctrine\ORM\EntityManagerInterface;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Assets;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Filters;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Dto\EntityDto;
+use EasyCorp\Bundle\EasyAdminBundle\Event\AfterCrudActionEvent;
+use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\SlugField;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
@@ -67,10 +71,12 @@ class OperationCrudController extends AbstractCrudController
         ;
 
         yield TextField::new('titre');
-
         yield SlugField::new('slug')
             ->setTargetFieldName('titre')
-            ->onlyOnForms();
+            ->onlyWhenCreating();
+
+        yield BooleanField::new('alaune', 'Opération à la une')
+            ->setHelp('Sera affiché "À la Une" sur la homepage');
 
         yield TextField::new('zipFile', 'Archive téléchargeable de l\'opération')
             ->setFormType(VichFileType::class)
@@ -96,7 +102,5 @@ class OperationCrudController extends AbstractCrudController
         yield DateField::new('date_debut');
         yield DateField::new('date_fin');
     }
-
-
 
 }

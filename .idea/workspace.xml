@@ -4,132 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ce17ff3-9607-4200-a24a-26ee10f98184" name="Changes" comment="log">
-      <change afterPath="$PROJECT_DIR$/.idea/granturismo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/controllers.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/brand-abarth-SW-black-01-menu.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/brand-abarth-SW-white-01-menu.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/brand-alfa-romeo-SW-white-02-menu.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/brand-fiat-SW-white-07.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/brand-jeep-SW-black-09.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/brand-jeep-SW-white-09.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/brand-lancia-SW-black-10.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/brand-lancia-SW-white-10.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/brand-maserati-SW-black-11.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/brand-maserati-SW-white-11.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/frise-450x58@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/logo-258x54@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/logo-abarth.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/logo-alfa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/logo-fiat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/logo-fiatpro.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/logo-jeep.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/logo-lancia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/stell-logo-blue.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/admin.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/bulmaStyles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/global.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/pages.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/liip_imagine.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/mailer.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/reset_password.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/uid.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/webpack_encore.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/routes/liip_imagine.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20230421130440.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20230421132153.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20230421132950.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20230421133257.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20230421133413.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20230421184321.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20230422120022.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20230422122234.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20230422123402.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20230422135843.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20230423171124.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20230425210922.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20230425212231.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20230425225139.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20230426083131.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20230426142609.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20230426144053.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/files/20230425/64485df490e07_100_K_V4_8de6690f9e.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/files/20230425/64485e0c0bb40_13-VisitSweden-ola_ericson-view_over_djurgarden.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/files/20230426/6448e285eab1c_03_maserati-grecale-modena_location-750x410.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/files/20230427/644a4b80742a2_archive-100Mo.dmg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/files/20230427/644a4c060ccde_archive-100Mo.dmg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/images/marques/logo-abarth-644a65eee5a20452630839.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/images/marques/logo-alfa-644a65bf69d57730375832.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/images/marques/logo-alfa-romeo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/images/marques/logo-fiat-644a65cb53e82325852811.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/images/marques/logo-fiatpro-644a65d539367487582683.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/images/marques/logo-jeep-644a65fdc1731138955566.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/images/marques/logo-lancia-644a6609d7b49102819553.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/images/operations/66285903-47115517-644a4b80784e5567051662.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/images/operations/66285903-47115517-644a4c060d5a0536603160.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/images/operations/desktop-phev-bottom-6446b8e6eb011781997801.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/images/operations/desktop-phev-top-6446f43b19bcb588102129.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/images/operations/mobile-hev-bottom-6446bd45cd2f7415406387.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/images/outils/100-k-v4-8de6690f9e-64485924317f7367893667.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/images/outils/100-k-v4-8de6690f9e-64485984ab609314109257.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/images/outils/66285903-47115517-644a504e4f49d092912013.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/images/outils/66285903-47115517-644a5063497aa176592451.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/CategorieCrudController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/FiletypeCrudController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/MarqueCrudController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/OperationCrudController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/OutilCrudController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/OperationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/ResetPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Categorie.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Marque.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Operation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Outil.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/ResetPasswordRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/ChangePasswordFormType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/ResetPasswordRequestFormType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/CategorieRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/FiletypeRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/MarqueRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/OperationRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/OutilRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/ResetPasswordRequestRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/default/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/default/operation.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/reset_password/check_email.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/reset_password/email.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/reset_password/request.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/reset_password/reset.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/translations/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="0ce17ff3-9607-4200-a24a-26ee10f98184" name="Changes" comment="GA4 Events">
+      <change afterPath="$PROJECT_DIR$/assets/admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20230428081351.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EventListener/UpdateEntitiesListener.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes/framework.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.override.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.override.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/OperationCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/OperationCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Operation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Operation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +29,7 @@
       <list>
         <option value="HTML File" />
         <option value="SCSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -264,7 +149,12 @@
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -378,7 +268,8 @@
       <workItem from="1682353369743" duration="10569000" />
       <workItem from="1682456603697" duration="18491000" />
       <workItem from="1682587658435" duration="7891000" />
-      <workItem from="1682611247927" duration="654000" />
+      <workItem from="1682611247927" duration="9930000" />
+      <workItem from="1682668521326" duration="6562000" />
     </task>
     <task id="LOCAL-00001" summary="log">
       <created>1682076057413</created>
@@ -387,7 +278,56 @@
       <option name="project" value="LOCAL" />
       <updated>1682076057413</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="v0.5">
+      <created>1682612170205</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682612170205</updated>
+    </task>
+    <task id="LOCAL-00003" summary="v0.5">
+      <created>1682612233188</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682612233188</updated>
+    </task>
+    <task id="LOCAL-00004" summary="redirection si déjà logged">
+      <created>1682614472619</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1682614472619</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ajout GA4">
+      <created>1682629354570</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1682629354570</updated>
+    </task>
+    <task id="LOCAL-00006" summary="operations date_end after now">
+      <created>1682629406128</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682629406128</updated>
+    </task>
+    <task id="LOCAL-00007" summary="modif fil ariane">
+      <created>1682629433808</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1682629433808</updated>
+    </task>
+    <task id="LOCAL-00008" summary="GA4 Events">
+      <created>1682630806459</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1682630806459</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,6 +347,12 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="log" />
-    <option name="LAST_COMMIT_MESSAGE" value="log" />
+    <MESSAGE value="v0.5" />
+    <MESSAGE value="redirection si déjà logged" />
+    <MESSAGE value="ajout GA4" />
+    <MESSAGE value="operations date_end after now" />
+    <MESSAGE value="modif fil ariane" />
+    <MESSAGE value="GA4 Events" />
+    <option name="LAST_COMMIT_MESSAGE" value="GA4 Events" />
   </component>
 </project>

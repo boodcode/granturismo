@@ -72,6 +72,9 @@ class Operation
     #[ORM\ManyToMany(targetEntity: Marque::class, inversedBy: 'operations')]
     private Collection $marques;
 
+    #[ORM\Column]
+    private ?bool $alaune = null;
+
 
 
     public function __construct()
@@ -318,6 +321,18 @@ class Operation
     public function getZipSize(): ?int
     {
         return $this->zipSize;
+    }
+
+    public function isAlaune(): ?bool
+    {
+        return $this->alaune;
+    }
+
+    public function setAlaune(bool $alaune): self
+    {
+        $this->alaune = $alaune;
+
+        return $this;
     }
 
 
