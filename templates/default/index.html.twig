@@ -4,28 +4,57 @@
 {%  set bodyClass = 'index' %}
 {% block body %}
     <section class="categories">
-            <div id="operations-items">
-                {% for cat, operationsInCat in operations %}
-                    {% if operationsInCat|length >0 %}
-                    <div class="categorie">
-                        <h2>{{ cat }}</h2>
-                        <div class="operations">
-                            {% for ope in operationsInCat %}
-                                <div class="operation-item">
-                                    <a href="/operation/{{ ope.slug }}">
-                                        <figure>
-                                            <img src="{{ asset(image_dir ~ 'operations/' ~ ope.visuel) | imagine_filter('slide')  }}"alt="{{ ope.titre }}"/>
-                                        </figure>
-                                    </a>
-                                    <strong>{{ ope.titre }} | {{ ope.dateDebut|date('d/m') }} > {{ ope.dateFin|date('d/m') }}</strong>
-                                </div>
+        <div id="operations-items">
+            {% for cat, operationsInCat in operations %}
+                {% if operationsInCat|length >0 %}
+                <div class="categorie">
+                    <h2>{{ cat }}</h2>
+                    <div class="operations">
+                        {% for ope in operationsInCat %}
+                            <div class="operation-item">
+                                <a href="/operation/{{ ope.slug }}">
+                                    <figure>
+                                        <img src="{{ asset(image_dir ~ 'operations/' ~ ope.visuel) | imagine_filter('slide')  }}"alt="{{ ope.titre }}"/>
+                                    </figure>
+                                </a>
+                                <strong>{{ ope.titre }} | {{ ope.dateDebut|date('d/m') }} > {{ ope.dateFin|date('d/m') }}</strong>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        {% if opeAlaune %}
+            <div class="alaune">
+                <h2>Nouveauté</h2>
+                <a href="/operation/{{ opeAlaune.slug }}" class="alaune">
+                    <figure >
+                        <img src="{{ asset(image_dir ~ 'operations/' ~ opeAlaune.visuel) | imagine_filter('slide')  }}"alt="{{ opeAlaune.titre }}"/>
+                    </figure>
+                    <div class="bloc">
+
+                        <div class="title_dates">
+                            <h4>{{ opeAlaune.titre }}</h4><br>
+                            <div class="dates">
+                                <span class="smallcaps">du</span><br>{{ opeAlaune.dateDebut|date('d/m') }}<br>
+                                <span class="smallcaps">au</span><br>{{ opeAlaune.dateFin|date('d/m') }}
+                            </div>
+
+                        </div>
+                        <div class="marques">
+                            {% for marque in opeAlaune.marques %}
+                                <figure class="logo">
+                                    <img src="{{ asset(image_dir ~ 'marques/' ~ marque.logo)   }}"alt="{{ marque.nom }}"/>
+                                </figure>
                             {% endfor %}
                         </div>
 
                     </div>
-                    {% endif %}
-                {% endfor %}
+                </a>
             </div>
+
+        {% endif %}
     </section>
 {% endblock %}
 

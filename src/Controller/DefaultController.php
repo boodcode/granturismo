@@ -31,14 +31,15 @@ class DefaultController extends AbstractController
 
         $categories = $categorieRepository->findAll();
         foreach ($categories as $category) {
-
             $operations[$category->getTitre()] = $operationRepository->findByCategorie($category);
         }
+        $operationAlaune = $operationRepository->findOneBy(['alaune'=> true]);
 
 
         return $this->render('default/index.html.twig', [
             'user' => $user,
-            'operations' => $operations
+            'operations' => $operations,
+            'opeAlaune' => $operationAlaune
         ]);
     }
 

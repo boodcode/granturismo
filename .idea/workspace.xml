@@ -4,16 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ce17ff3-9607-4200-a24a-26ee10f98184" name="Changes" comment="GA4 Events">
-      <change afterPath="$PROJECT_DIR$/assets/admin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20230428081351.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventListener/UpdateEntitiesListener.php" afterDir="false" />
+    <list default="true" id="0ce17ff3-9607-4200-a24a-26ee10f98184" name="Changes" comment="fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/OperationCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/OperationCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Operation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Operation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/bulmaStyles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/bulmaStyles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/pages.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/pages.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/OperationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/OperationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default/operation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/operation.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -269,7 +268,7 @@
       <workItem from="1682456603697" duration="18491000" />
       <workItem from="1682587658435" duration="7891000" />
       <workItem from="1682611247927" duration="9930000" />
-      <workItem from="1682668521326" duration="6562000" />
+      <workItem from="1682668521326" duration="10048000" />
     </task>
     <task id="LOCAL-00001" summary="log">
       <created>1682076057413</created>
@@ -327,7 +326,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682630806459</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Gestion Operation isAlaune">
+      <created>1682675816374</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1682675816374</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fix">
+      <created>1682677134559</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1682677134559</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,6 +366,8 @@
     <MESSAGE value="operations date_end after now" />
     <MESSAGE value="modif fil ariane" />
     <MESSAGE value="GA4 Events" />
-    <option name="LAST_COMMIT_MESSAGE" value="GA4 Events" />
+    <MESSAGE value="Gestion Operation isAlaune" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
 </project>
