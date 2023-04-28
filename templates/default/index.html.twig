@@ -17,7 +17,7 @@
                                         <img src="{{ asset(image_dir ~ 'operations/' ~ ope.visuel) | imagine_filter('slide')  }}"alt="{{ ope.titre }}"/>
                                     </figure>
                                 </a>
-                                <strong>{{ ope.titre }} | {{ ope.dateDebut|date('d/m') }} > {{ ope.dateFin|date('d/m') }}</strong>
+                                <strong>{{ ope.titre }}</strong><br> <span class="gris">{{ ope.dateDebut|date('d/m') }} > {{ ope.dateFin|date('d/m') }}</span>
                             </div>
                         {% endfor %}
                     </div>
