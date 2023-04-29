@@ -24,6 +24,8 @@
         "build": "encore production --progress"
     },
     "dependencies": {
+        "filepond": "^4.30.4",
+        "filepond-plugin-file-validate-type": "^1.2.8",
         "sass-loader": "^13.2.2"
     }
 }

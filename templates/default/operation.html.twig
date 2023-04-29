@@ -40,7 +40,7 @@
                     </div>
                     {% if ope.globalZip %}
                     <a class="file"
-                       href="{{ asset(files_dir) ~ ope.uploadTimestamp|date('Ymd') ~ '/' ~ ope.globalZip }}"
+                       href="{{ asset(files_dir) ~ ope.id ~'/' ~ope.uploadTimestamp|date('Ymd') ~ '/' ~ ope.globalZip }}"
                        target="_blank"
                        data-operation="{{ ope.titre }}"
                        data-user="{{ user.username }}"

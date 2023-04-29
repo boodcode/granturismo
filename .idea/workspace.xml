@@ -4,11 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ce17ff3-9607-4200-a24a-26ee10f98184" name="Changes" comment="FRONT - A la une">
+    <list default="true" id="0ce17ff3-9607-4200-a24a-26ee10f98184" name="Changes" comment="style">
+      <change afterPath="$PROJECT_DIR$/public/uploads/files/20230429/100-K-V4-8de6690f9e-644ce5c41df00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/files/20230429/13-VisitSweden-ola-ericson-view-over-djurgarden-644ceb39a9236.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/files/20230429/13-VisitSweden-ola-ericson-view-over-djurgarden-644cec5f6ead6.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/files/20230429/20230109-122848-644ce702030d8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/files/20230429/6156fd6eb59992-38861192-644ce6b2ceac6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/files/20230429/6156fd6eb59992-38861192-644ce6ef8e45b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/files/20230429/66285903-47115517-644ced9b85eec.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/files/20230429/66285903-47115517-644cee65d8989.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/files/20230429/NICE-by-UTMB-GARMIN-part-2-644cedc0e4432.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/files/9/20230429/1603-Guide-coureur-Trail-Alsace-Grand-Est-BY-UTMB-2023-644cf840d7d3d.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/files/9/20230429/20230221-154509-644cf56ec9e73.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/operations/100-k-v4-8de6690f9e-644cd5459a7e7748378428.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/FileController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Naming/CustomDirectoryNamer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/bulmaStyles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/bulmaStyles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/admin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/admin.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/files/20230425/64485df490e07_100_K_V4_8de6690f9e.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/files/20230429/100-K-V4-8de6690f9e-644ce4cfa464d.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/files/20230425/64485e0c0bb40_13-VisitSweden-ola_ericson-view_over_djurgarden.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/files/20230426/6448e285eab1c_03_maserati-grecale-modena_location-750x410.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/files/20230427/644a4b80742a2_archive-100Mo.dmg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/files/20230427/644a4c060ccde_archive-100Mo.dmg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/operations/66285903-47115517-644a4c060d5a0536603160.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/OperationCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/OperationCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/OperationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/OperationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default/operation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/operation.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,6 +190,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Naming" />
       <recent name="$PROJECT_DIR$/templates/default" />
       <recent name="$PROJECT_DIR$/public" />
     </key>
@@ -264,7 +291,7 @@
       <workItem from="1682456603697" duration="18491000" />
       <workItem from="1682587658435" duration="7891000" />
       <workItem from="1682611247927" duration="9930000" />
-      <workItem from="1682668521326" duration="10815000" />
+      <workItem from="1682668521326" duration="39181000" />
     </task>
     <task id="LOCAL-00001" summary="log">
       <created>1682076057413</created>
@@ -343,7 +370,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682679718959</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="style">
+      <created>1682680550716</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1682680550716</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -372,6 +406,7 @@
     <MESSAGE value="Gestion Operation isAlaune" />
     <MESSAGE value="fix" />
     <MESSAGE value="FRONT - A la une" />
-    <option name="LAST_COMMIT_MESSAGE" value="FRONT - A la une" />
+    <MESSAGE value="style" />
+    <option name="LAST_COMMIT_MESSAGE" value="style" />
   </component>
 </project>

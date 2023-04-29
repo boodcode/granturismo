@@ -1,3 +1,5 @@
+@import 'filepond/dist/filepond.min.css';
+
 .flex-fill {
   flex: 1 1 auto!important;
   margin: 20px 0 10px;
@@ -10,3 +12,11 @@
   }
 }
 
+.input-file-container {
+  min-width: 300px;
+}
+
+
+ :root {
+   --fieldset-bg: #3d5373;
+ }

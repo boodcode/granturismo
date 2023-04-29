@@ -12,7 +12,10 @@ use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Dto\EntityDto;
 use EasyCorp\Bundle\EasyAdminBundle\Event\AfterCrudActionEvent;
 use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\HiddenField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\SlugField;
+use EasyCorp\Bundle\EasyAdminBundle\Form\Type\FileUploadType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
@@ -85,7 +88,7 @@ class OperationCrudController extends AbstractCrudController
                 'allow_delete' => true,
                 'delete_label' => 'supprimer le fichier',
                 'download_label' => 'télécharger le fichier',
-                'asset_helper' => true,
+                'asset_helper' => false
             ])
             ->onlyOnForms();
 
@@ -102,5 +105,7 @@ class OperationCrudController extends AbstractCrudController
         yield DateField::new('date_debut');
         yield DateField::new('date_fin');
     }
+
+
 
 }

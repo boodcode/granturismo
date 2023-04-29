@@ -27,3 +27,9 @@ services:
             - { name: doctrine.event_listener, event: postPersist }
             - { name: doctrine.event_listener, event: postUpdate }
 
+
+    App\Naming\CustomDirectoryNamer:
+        class: App\Naming\CustomDirectoryNamer
+        public: true
+
+
