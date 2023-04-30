@@ -1,37 +1,36 @@
 
 
-.page-login{
-  min-height: 100vh;
+.page-login,
+.page-resetpassword {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  .section{
-    display:flex;
+
+  .container {
+    width: 100%;
+    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding-top: 0;
-    padding-bottom: 0;
+    justify-content: center;
   }
-  .container{
-    background-color: rgba(255, 255, 255,1);
-  }
-  .container>.row{
-    &:first-child{
-      margin-bottom: 5px;
+  .column {
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 8px;
+    &:last-of-type{
+      padding:1.5rem;
     }
-    &>.col{
-      background-color: rgba(255, 255, 255, 0.9);
-      border-radius: 4px;
-      &:last-of-type{
-        margin-top: 50px;
-        padding:0.75rem;
-      }
+    img {
+
+    }
+    form {
+      margin-top: 50px;
+      width:100%;
       .flex{
         flex-direction: row;
         justify-content: space-between;
         margin-bottom: 0;
         .input-field{
-          width:48%;
+          width:100%;
 
           &>label{
             left:50%;
@@ -44,24 +43,37 @@
             }
           }
           input[type="password"],
+          input[id="username"],
           input[type="email"]{
-            border:1px solid rgba(0,0,0,0.05);
-            text-align: center;
+            width: 100%;
+            outline: none;
+            padding: 5px;
+            margin-bottom: 10px;
+            border:1px solid rgba(0,0,0,0.1);
           }
         }
       }
-
     }
   }
-
-  small {display:inline-block;}
-
-}
-.page-forgotten_password {
-  .section {
-    height: calc(100vh - 75px - 2rem);
+  button {
+    text-align: right;
+    background-color: $orange;
+    text-transform: uppercase;
+    padding: 5px 15px;
+    color: #ffffff;
+    border: none;
+    margin-top: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
   }
+  small {display:inline-block;}
 }
+
+.page-login {
+  background-image: url('../images/login-bg.jpg');
+  background-size: cover;
+}
+
 
 .page-index {
   section.categories {

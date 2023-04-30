@@ -1,9 +1,19 @@
-<h1>Bonjour!</h1>
+<div style="width:80%;
+position:relative;
+text-align: center;
+padding:20px 20px 20px 20px;
+margin-bottom:20px;
+border-bottom: 1px solid #CCCCCC;">
+    <img src="{{ absolute_url(asset('build/assets/images/logo-258x54@2x.png')) }}" style="width:258px;display: block;" alt="logo">
+</div>
+<div style="width:80%;text-align: left;padding:0 5%;">
+    <h1>Bonjour!</h1>
+    <p>Pour réinitialiser votre mot de passe, merci de cliquer sur le lien ci-dessous</p>
+    <a href="{{ url('app_reset_password', {token: resetToken.token}) }}">{{ url('app_reset_password', {token: resetToken.token}) }}</a>
+    <p>Ce lien expire dans {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.</p>
+    <p>Merci!</p>
+</div>
 
-<p>Pour réinitialiser votre mot de passe, merci de cliquer sur le lien ci-dessous</p>
 
-<a href="{{ url('app_reset_password', {token: resetToken.token}) }}">{{ url('app_reset_password', {token: resetToken.token}) }}</a>
 
-<p>Ce lien expire dans {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.</p>
 
-<p>Merci!</p>
