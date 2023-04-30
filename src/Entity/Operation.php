@@ -9,6 +9,8 @@ use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 #[ORM\Entity(repositoryClass: OperationRepository::class)]
 #[Vich\Uploadable]
@@ -36,6 +38,11 @@ class Operation
 
     // NOTE: This is not a mapped field of entity metadata, just a simple property.
     #[Vich\UploadableField(mapping: 'zipFile', fileNameProperty: 'global_zip', size: 'zipSize')]
+    #[Assert\File(
+        maxSize: '1024M',
+        mimeTypes: ['application/zip', 'application/pdf'],
+        mimeTypesMessage: 'Veuillez télécharger un fichier de type ZIP ou PDF'
+    )]
     private ?File $zipFile = null;
 
     #[ORM\Column(length: 255, nullable: true)]
@@ -46,6 +53,11 @@ class Operation
 
     // NOTE: This is not a mapped field of entity metadata, just a simple property.
     #[Vich\UploadableField(mapping: 'operation_visuel', fileNameProperty: 'visuel', size: 'imageSize')]
+    #[Assert\File(
+        maxSize: '2M',
+        mimeTypes: ['image/jpeg', 'image/png'],
+        mimeTypesMessage: 'Veuillez télécharger un fichier image valide (jpg, png)'
+    )]
     private ?File $imageFile = null;
 
     #[ORM\Column(length: 255)]
@@ -60,8 +72,6 @@ class Operation
     #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $uploadTimestamp = null;
 
-
-
     #[ORM\OneToMany(mappedBy: 'operation', targetEntity: Outil::class, cascade: ['remove'])]
     private Collection $outils;
 
@@ -75,14 +85,11 @@ class Operation
     #[ORM\Column]
     private ?bool $alaune = null;
 
-
-
     public function __construct()
     {
         $this->outils = new ArrayCollection();
         $this->marques = new ArrayCollection();
     }
-
 
     public function getId(): ?int
     {
