@@ -7,6 +7,8 @@ use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 #[ORM\Entity(repositoryClass: OutilRepository::class)]
 #[Vich\Uploadable]
@@ -29,6 +31,11 @@ class Outil
 
     // NOTE: This is not a mapped field of entity metadata, just a simple property.
     #[Vich\UploadableField(mapping: 'outil_visuel', fileNameProperty: 'visuel', size: 'imageSize')]
+    #[Assert\File(
+        maxSize: '1M',
+        mimeTypes: ['image/png'],
+        mimeTypesMessage: 'Veuillez télécharger un fichier image valide (png)'
+    )]
     private ?File $imageFile = null;
 
     #[ORM\Column(type: Types::TEXT)]
