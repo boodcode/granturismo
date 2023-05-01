@@ -55,6 +55,9 @@ class OperationCrudController extends AbstractCrudController
 
     public function configureFields(string $pageName): iterable
     {
+        yield IdField::new('id', 'ID')
+            ->onlyOnIndex()
+        ;
         yield ImageField::new('visuel', 'Visuel')
             ->setBasePath('/uploads/images/operations')
             ->onlyOnIndex()
