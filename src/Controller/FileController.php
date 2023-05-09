@@ -70,7 +70,5 @@ class FileController extends AbstractController
                 'error' => $e->getMessage()
             ]);
         }
-
-
     }
 }
