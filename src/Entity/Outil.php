@@ -32,9 +32,9 @@ class Outil
     // NOTE: This is not a mapped field of entity metadata, just a simple property.
     #[Vich\UploadableField(mapping: 'outil_visuel', fileNameProperty: 'visuel', size: 'imageSize')]
     #[Assert\File(
-        maxSize: '1M',
-        mimeTypes: ['image/png'],
-        mimeTypesMessage: 'Veuillez télécharger un fichier image valide (png)'
+        maxSize: '2M',
+        mimeTypes: ['image/jpeg', 'image/png'],
+        mimeTypesMessage: 'Veuillez télécharger un fichier image valide (jpg, png)'
     )]
     private ?File $imageFile = null;
 
