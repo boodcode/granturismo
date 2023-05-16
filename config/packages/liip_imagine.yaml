@@ -30,7 +30,8 @@ liip_imagine:
 
       # list of transformations to apply (the "filters")
       filters:
-        thumbnail: { size: [ 300, 200 ], mode: inset }
+        thumbnail: { size: [ 280, 180 ], mode: inset }
+        background: { size: [ 300, 200 ], position: center, color: '#ffffff' }
 
     operation_cover:
       format: jpeg
