@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ba17d28f-f134-4c49-9cb7-850ac52be5bb" name="monplandactioncommerciales" url="https://monplandactionscommerciales.fr">
+        <fileTransfer rootFolder="/var/www/vhosts/monplandactionscommerciales.fr/httpdocs" accessType="SFTP" host="141.95.203.139" port="22" sshConfigId="e80868c2-0c8e-4bc2-84d9-9e2c3ebf7e14" sshConfig="monplandactionscomme_8dgjr0w5fl5@141.95.203.139:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
