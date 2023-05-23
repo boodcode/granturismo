@@ -7,11 +7,11 @@
     <div class="container">
         <div class="content">
             <p>
-                Si un compte correspond à votre adresse e-mail,<br>
-                un e-mail sera envoyé contenant un lien que vous pouvez utiliser pour réinitialiser votre mot de passe.<br>
+                Vous allez recevoir un e-mail contenant un lien que vous pouvez utiliser pour réinitialiser votre mot de passe.<br>
                 Ce lien expirera dans {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.
             </p>
-            <p>Si vous ne recevez pas d'e-mail, veuillez vérifier votre dossier spam ou <a href="{{ path('app_forgot_password_request') }}">essayer une nouvelle fois</a>.</p>
+            <br>
+            <p>Si vous ne recevez pas d'e-mail, <strong>veuillez vérifier votre dossier de courriers indésirables / SPAM</strong> ou <a href="{{ path('app_forgot_password_request') }}">essayer une nouvelle fois</a>.</p>
 
         </div>
     </div>
