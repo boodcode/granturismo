@@ -84,7 +84,7 @@ class OperationCrudController extends AbstractCrudController
         yield BooleanField::new('alaune', 'Opération à la une')
             ->setHelp('Sera affiché "À la Une" sur la homepage');
 
-        yield TextField::new('zipFile', 'Archive téléchargeable de l\'opération')
+        yield TextField::new('zipFile', 'Archive téléchargeable de l\'opération (ATTENTION : créer d\'abord l\'opération)')
             ->setFormType(VichFileType::class)
             ->setFormTypeOptions([
                 'required' => false,
