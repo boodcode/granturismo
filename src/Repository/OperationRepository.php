@@ -45,15 +45,25 @@ class OperationRepository extends ServiceEntityRepository
     public function findByCategorie($value): array
     {
 
-        return $this->createQueryBuilder('o')
-            ->andWhere('o.categorie = :val')
-            ->setParameter('val', $value)
-            ->andWhere('o.date_fin >= :today')
-            ->setParameter('today', new \DateTimeImmutable())
-            ->orderBy('o.id', 'ASC')
-            ->setMaxResults(12)
-            ->getQuery()
-            ->getResult()
+        if($value->getId() == 7) { //Operations terminées
+            $query = $this->createQueryBuilder('o')
+                ->andWhere('o.categorie = :val')
+                ->setParameter('val', $value)
+                ->orderBy('o.id', 'ASC')
+                ->setMaxResults(20)
+                ->getQuery();
+        } else {
+            $query = $this->createQueryBuilder('o')
+                ->andWhere('o.categorie = :val')
+                ->setParameter('val', $value)
+                ->andWhere('o.date_fin >= :today')
+                ->setParameter('today', new \DateTimeImmutable())
+                ->orderBy('o.id', 'ASC')
+                ->setMaxResults(20)
+                ->getQuery();
+        }
+        return
+            $query->getResult()
         ;
     }
 
