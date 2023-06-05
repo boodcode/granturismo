@@ -44,6 +44,7 @@ class ImportCsvDataCommand extends Command
 
         $records = $reader->getRecords();
 
+        $io->progressStart();
         foreach ($records as $record) {
             $user = new User();
             $user
@@ -52,6 +53,7 @@ class ImportCsvDataCommand extends Command
                 ->setPassword(substr($record->username, 0, 1).'2023')
                 ->setRoles(['ROLE_USER']);
             $this->entityManager->persist($user);
+            $io->progressAdvance();
         }
 
         $this->entityManager->flush();
