@@ -31,7 +31,8 @@ class ImportCsvDataCommand extends Command
 
     protected function configure(): void
     {
-
+        $this
+            ->setName('app:import-csv-users');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
