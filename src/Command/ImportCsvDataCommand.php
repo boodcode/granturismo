@@ -21,7 +21,7 @@ use Doctrine\ORM\EntityManagerInterface;
 )]
 class ImportCsvDataCommand extends Command
 {
-    protected static $defaultName = 'app:import-csv-users';
+    protected static $defaultName = 'app:import-csv-data';
     private $entityManager;
     public function __construct(EntityManagerInterface $entityManager)
     {
@@ -31,8 +31,7 @@ class ImportCsvDataCommand extends Command
 
     protected function configure(): void
     {
-        $this
-            ->setName('app:import-csv-users');
+
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
