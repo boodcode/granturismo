@@ -54,6 +54,8 @@ class ImportCsvDataCommand extends Command
                 ->setPassword(substr($record->username, 0, 1).'2023')
                 ->setRoles(['ROLE_USER']);
             $this->entityManager->persist($user);
+
+            $io->comment($record);
             $io->progressAdvance();
         }
 
