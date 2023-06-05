@@ -12,6 +12,8 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 
 use League\Csv\Reader;
+use Doctrine\ORM\EntityManagerInterface;
+
 
 #[AsCommand(
     name: 'import_csv_data',
