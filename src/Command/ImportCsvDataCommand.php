@@ -23,7 +23,6 @@ use Doctrine\ORM\EntityManagerInterface;
 )]
 class ImportCsvDataCommand extends Command
 {
-    protected static $defaultName = 'app:import_csv_data';
     private $entityManager;
     public function __construct(EntityManagerInterface $entityManager)
     {
@@ -41,7 +40,7 @@ class ImportCsvDataCommand extends Command
         $io = new SymfonyStyle($input, $output);
 
         $csvFile = "../src/Datas/users/csv";
-        $reader = Reader::createFromPath($csvFile);
+        $reader = Reader::createFromPath('%kernel.root_dir%/'.$csvFile);
         $reader->setDelimiter(';');
 
         $records = $reader->getRecords();
