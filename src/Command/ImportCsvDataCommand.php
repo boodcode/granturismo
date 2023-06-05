@@ -16,9 +16,9 @@ use Doctrine\ORM\EntityManagerInterface;
 
 
 #[AsCommand(
-    name: 'import_csv_data',
+    name: 'app:import_users',
     description: 'Add a short description for your command',
-    aliases: ['app:import_csv_data'],
+    aliases: ['app:import_users'],
     hidden: false
 )]
 class ImportCsvDataCommand extends Command
