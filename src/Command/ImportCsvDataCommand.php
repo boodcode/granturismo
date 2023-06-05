@@ -39,7 +39,7 @@ class ImportCsvDataCommand extends Command
     {
         $io = new SymfonyStyle($input, $output);
 
-        $csvFile = "../src/Datas/users/csv";
+        $csvFile = "../src/Datas/users.csv";
         $reader = Reader::createFromPath('%kernel.root_dir%/'.$csvFile);
         $reader->setDelimiter(';');
 
