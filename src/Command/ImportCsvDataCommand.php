@@ -18,10 +18,12 @@ use Doctrine\ORM\EntityManagerInterface;
 #[AsCommand(
     name: 'import_csv_data',
     description: 'Add a short description for your command',
+    aliases: ['app:import_csv_data'],
+    hidden: false
 )]
 class ImportCsvDataCommand extends Command
 {
-    protected static $defaultName = 'app:import-csv-data';
+    protected static $defaultName = 'app:import_csv_data';
     private $entityManager;
     public function __construct(EntityManagerInterface $entityManager)
     {
