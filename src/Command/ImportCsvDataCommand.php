@@ -42,6 +42,7 @@ class ImportCsvDataCommand extends Command
         $csvFile = "../src/Datas/users.csv";
         $reader = Reader::createFromPath('%kernel.root_dir%/'.$csvFile);
         $reader->setDelimiter(';');
+        $reader->setHeaderOffset(0);
 
         $records = $reader->getRecords();
 
@@ -55,7 +56,7 @@ class ImportCsvDataCommand extends Command
                 ->setRoles(['ROLE_USER']);
             $this->entityManager->persist($user);
 
-            $io->comment($record);
+           // $io->comment($record);
             $io->progressAdvance();
         }
 
