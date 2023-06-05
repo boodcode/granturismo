@@ -55,7 +55,7 @@ class ImportCsvDataCommand extends Command
                 ->setRoles(['ROLE_USER']);
             $this->entityManager->persist($user);
 
-            //$io->comment($record);
+            $io->comment($record);
             $io->progressAdvance();
         }
 
