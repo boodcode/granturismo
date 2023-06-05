@@ -49,13 +49,13 @@ class ImportCsvDataCommand extends Command
         foreach ($records as $record) {
             $user = new User();
             $user
-                ->setEmail($record->email)
-                ->setUsername($record->username)
-                ->setPassword(substr($record->username, 0, 1).'2023')
+                ->setEmail($record['email'])
+                ->setUsername($record['username'])
+                ->setPassword(substr($record['username'], 0, 1).'2023')
                 ->setRoles(['ROLE_USER']);
             $this->entityManager->persist($user);
 
-            $io->comment($record);
+            //$io->comment($record);
             $io->progressAdvance();
         }
 
