@@ -7,6 +7,7 @@ use App\Entity\Marque;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
 
@@ -23,6 +24,7 @@ class CategorieCrudController extends AbstractCrudController
         yield IdField::new('id', 'ID')
             ->onlyOnIndex()
         ;
+        yield IntegerField::new('ordre');
         yield TextField::new('titre');
         yield AssociationField::new('operations')
             ->onlyOnIndex()
