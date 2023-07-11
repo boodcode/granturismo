@@ -30,10 +30,10 @@ class Operation
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
 
-    #[ORM\Column(type: Types::DATE_MUTABLE)]
+    #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $date_debut = null;
 
-    #[ORM\Column(type: Types::DATE_MUTABLE)]
+    #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $date_fin = null;
 
     // NOTE: This is not a mapped field of entity metadata, just a simple property.
@@ -72,7 +72,7 @@ class Operation
     #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $uploadTimestamp = null;
 
-    #[ORM\OneToMany(mappedBy: 'operation', targetEntity: Outil::class, cascade: ['remove'])]
+    #[ORM\OneToMany(mappedBy: 'operation', targetEntity: Outil::class, cascade: ['persist','remove'])]
     private Collection $outils;
 
     #[ORM\ManyToOne(inversedBy: 'operations')]
@@ -85,10 +85,16 @@ class Operation
     #[ORM\Column]
     private ?bool $alaune = null;
 
+    #[ORM\OneToMany(mappedBy: 'outil', targetEntity: StatUser::class)]
+    private Collection $statUsers;
+
+
+
     public function __construct()
     {
         $this->outils = new ArrayCollection();
         $this->marques = new ArrayCollection();
+        $this->statUsers = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -341,6 +347,38 @@ class Operation
 
         return $this;
     }
+
+    /**
+     * @return Collection<int, StatUser>
+     */
+    public function getStatUsers(): Collection
+    {
+        return $this->statUsers;
+    }
+
+    public function addStatUser(StatUser $statUser): self
+    {
+        if (!$this->statUsers->contains($statUser)) {
+            $this->statUsers->add($statUser);
+            $statUser->setOperation($this);
+        }
+
+        return $this;
+    }
+
+    public function removeStatUser(StatUser $statUser): self
+    {
+        if ($this->statUsers->removeElement($statUser)) {
+            // set the owning side to null (unless already changed)
+            if ($statUser->getOperation() === $this) {
+                $statUser->setOperation(null);
+            }
+        }
+
+        return $this;
+    }
+
+
 
 
 
