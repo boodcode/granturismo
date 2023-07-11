@@ -27,6 +27,15 @@ services:
             - { name: doctrine.event_listener, event: postPersist }
             - { name: doctrine.event_listener, event: postUpdate }
 
+    App\EventListener\ExceptionListener:
+      tags:
+        - { name: kernel.event_listener, event: kernel.exception }
+
+
+    App\EventListener\LoginListener:
+      tags:
+        - { name: kernel.event_subscriber }
+
 
     App\Naming\CustomDirectoryNamer:
         class: App\Naming\CustomDirectoryNamer
