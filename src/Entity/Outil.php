@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\OutilRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
@@ -46,6 +48,14 @@ class Outil
 
     #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $updatedAt = null;
+
+    #[ORM\OneToMany(mappedBy: 'outil', targetEntity: StatUser::class)]
+    private Collection $statUsers;
+
+    public function __construct()
+    {
+        $this->statUsers = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -137,5 +147,40 @@ class Outil
     public function getImageSize(): ?int
     {
         return $this->imageSize;
+    }
+
+    /**
+     * @return Collection<int, StatUser>
+     */
+    public function getStatUsers(): Collection
+    {
+        return $this->statUsers;
+    }
+
+    public function addStatUser(StatUser $statUser): self
+    {
+        if (!$this->statUsers->contains($statUser)) {
+            $this->statUsers->add($statUser);
+            $statUser->setOutil($this);
+        }
+
+        return $this;
+    }
+
+    public function removeStatUser(StatUser $statUser): self
+    {
+        if ($this->statUsers->removeElement($statUser)) {
+            // set the owning side to null (unless already changed)
+            if ($statUser->getOutil() === $this) {
+                $statUser->setOutil(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function __toString(): string
+    {
+        return $this->titre;
     }
 }
