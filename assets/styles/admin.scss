@@ -2,10 +2,10 @@
 
 .flex-fill {
   flex: 1 1 auto!important;
-  margin: 20px 0 10px;
+  margin: 15px 0 5px;
 
   .ea-light-scheme &  {
-    border-bottom: 1px solid var(--true-gray-300);
+    border-bottom: 1px solid var(--true-gray-100);
   }
   .ea-dark-scheme & {
     border-bottom: 1px solid var(--true-gray-700);
