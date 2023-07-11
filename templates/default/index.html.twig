@@ -17,7 +17,11 @@
                                         <img src="{{ asset(image_dir ~ 'operations/' ~ ope.visuel) | imagine_filter('slide')  }}"alt="{{ ope.titre }}"/>
                                     </figure>
                                 </a>
-                                <strong>{{ ope.titre }}</strong><br> <span class="gris">{{ ope.dateDebut|date('d/m') }} > {{ ope.dateFin|date('d/m') }}</span>
+                                <strong>{{ ope.titre }}</strong><br>
+                                {% if ope.dateDebut|date('Y') != '1970' or ope.dateFin|date('Y') != '2100' %}
+                                    <span class="gris">{% if ope.dateDebut|date('Y') != '1970' %}{{ ope.dateDebut|date('d/m') }} {% else  %}... {% endif %} >
+                                    {% if ope.dateFin|date('Y') != '2100' %}{{ ope.dateFin|date('d/m') }} {% else  %}...{% endif %}</span>
+                                {%  endif %}
                             </div>
                         {% endfor %}
                     </div>
