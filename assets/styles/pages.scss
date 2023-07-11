@@ -254,6 +254,7 @@
         display: flex;
         padding: 0px 50px 0px 0px;
         figure {
+          line-height:0;
           width:200px;
           margin-right: 30px;
           background-color: #FFF;
@@ -274,5 +275,37 @@
 .icon-text {
   .icon {
     vertical-align: middle;
+  }
+}
+
+.fixed {
+  position: fixed;
+  top: 75px;
+  width: 100%;
+  right: 40px;
+}
+
+
+.stats{
+  padding: 30px 0;
+  height: calc(100vh - 200px);
+
+  .container {
+    height: 100%;
+
+    .statHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+
+    #tableStat_01 {
+      width:100%;
+      height: calc(100% - 30px);
+    }
+  }
+  .is-hidden {
+    display: none !important;
   }
 }

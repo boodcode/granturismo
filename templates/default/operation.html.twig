@@ -2,8 +2,16 @@
 
 {% extends 'base.html.twig' %}
 {%  set bodyClass = 'operation' %}
+{% block menu %}
+    <div class="menu">
+        {% for cat, operationsInCat in operations %}
+            {% if operationsInCat|length >0 %}
+                <a class="menuCat" href="/#{{ cat | replace({ 'è':'e', 'é':'e', 'ê':'e', ' ':'-' }) }}">{{ cat|upper }}</a>
+            {% endif %}
+        {% endfor %}
+    </div>
+{%  endblock %}
 {% block body %}
-
     <section class="operation">
         <div class="container">
             <small>

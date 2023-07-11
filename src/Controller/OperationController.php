@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Categorie;
 use App\Entity\Operation;
+use App\Entity\StatUser;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -43,15 +44,36 @@ class OperationController extends AbstractController
 
         $user = $this->getUser();
 
-        $operation = [];
+        //ope pour le menu
+        $operations = [];
+        $categorieRepository = $entityManager->getRepository(Categorie::class);
+        $operationRepository = $entityManager->getRepository(Operation::class);
+        $categories = $categorieRepository->findAll();
+        foreach ($categories as $category) {
+            $operations[$category->getTitre()] = $operationRepository->findByCategorie($category);
+        }
 
+
+
+        //ope en cours
+        $operation = [];
         $operationRepository = $entityManager->getRepository(Operation::class);
         $operation = $operationRepository->findOneBy(['slug' => $slug ]);
 
+        //Stat
+        $stat = new StatUser();
+        $stat
+            ->setType('visite')
+            ->setDate(new \DateTimeImmutable())
+            ->setUser($user)
+            ->setOperation($operation);
+        $entityManager->persist($stat);
+        $entityManager->flush();
+
         return $this->render('default/operation.html.twig', [
             'user' => $user,
-            'ope' => $operation
+            'ope' => $operation,
+            'operations' => $operations
         ]);
     }
-
 }

@@ -4,6 +4,9 @@ html, body {
   font-family: 'Barlow';
   font-weight: 400;
 }
+body {
+  padding-top: 81px;
+}
 
 h1 {
   font-size: 2.4em;
@@ -28,7 +31,6 @@ h3 {
   color: #000000;
 
 }
-
 h4 {
   font-size: 1.05em;
   line-height: 1em;
@@ -36,8 +38,6 @@ h4 {
   margin-bottom: 0.4em;
   text-transform: uppercase;
 }
-
-
 p {
   color: #222222;
 }
@@ -51,11 +51,41 @@ strong {
 .smallcaps {
   font-variant: small-caps;
 }
+
+.header {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+}
+
+
 .navbar-menu {
   padding: 10px 20px;
   border-bottom: 1px solid #DDD;
   margin-bottom: 0px;
   background-color: #ffffff;
+
+  p {
+    text-align: right;
+  }
+
+  .navbar-end{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    .menu {
+      .menuCat {
+        color: #000;
+        font-weight: 600;
+        padding: 0 20px;
+        & + menuCat {
+          border-left: 1px solid rgba(0,0,0,0.5);
+        }
+      }
+    }
+  }
+
 }
 
 .logo-small {
