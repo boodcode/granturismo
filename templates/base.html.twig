@@ -39,14 +39,17 @@
 
             <div class="navbar-end">
                 {% if is_granted('ROLE_USER') %}
-                    <p>{{ app.user.username }}&nbsp; | &nbsp;<a href="/deconnexion">
+                    <p>{{ app.user.username }}&nbsp; | &nbsp;
+                        <a href="/deconnexion">
                             <span class="icon-text">
                               <span class="icon">
                                 <ion-icon name="log-out-outline"></ion-icon>
                               </span>
                                 <span>se déconnecter</span>
                             </span>
-                        </a></p>
+                        </a>
+                    </p>
+                    {% block menu %}{% endblock %}
                 {% endif %}
             </div>
         </div>
