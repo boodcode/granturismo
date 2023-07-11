@@ -2,12 +2,21 @@
 
 {% extends 'base.html.twig' %}
 {%  set bodyClass = 'index' %}
+{% block menu %}
+    <div class="menu">
+        {% for cat, operationsInCat in operations %}
+            {% if operationsInCat|length >0 %}
+                <span class="menuCat" data-cat="{{ cat | replace({ 'è':'e', 'é':'e', 'ê':'e', ' ':'-' }) }}">{{ cat|upper }}</span>
+            {% endif %}
+        {% endfor %}
+    </div>
+{%  endblock %}
 {% block body %}
     <section class="categories">
         <div id="operations-items">
             {% for cat, operationsInCat in operations %}
                 {% if operationsInCat|length >0 %}
-                <div class="categorie">
+                <div class="categorie" id="{{ cat | replace({ 'è':'e', 'é':'e', 'ê':'e', ' ':'-' })}}">
                     <h2>{{ cat }}</h2>
                     <div class="operations">
                         {% for ope in operationsInCat %}
