@@ -24,13 +24,19 @@
                     <div class="description">{{ ope.description | raw }}</div>
                 </div>
                 <div class="bloc">
+                    {% if ope.dateDebut|date('Y') != "1970" or ope.dateFin|date('Y') != '2100' %}
                     <div class="title_dates">
                         <div class="dates">
-                            <span class="smallcaps">du</span><br>{{ ope.dateDebut|date('d/m') }}<br>
-                            <span class="smallcaps">au</span><br>{{ ope.dateFin|date('d/m') }}
+                            {% if ope.dateDebut|date('Y') != '1970' %}
+                                <span class="smallcaps">du</span><br>{{ ope.dateDebut|date('d/m') }}<br>
+                            {% endif %}
+                            {% if ope.dateFin|date('Y') != '2100' %}
+                                <span class="smallcaps">au</span><br>{{ ope.dateFin|date('d/m') }}
+                            {% endif %}
                         </div>
-
                     </div>
+                    {% endif %}
+
                     <div class="marques">
                         {% for marque in ope.marques %}
                             <figure class="logo">
