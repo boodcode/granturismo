@@ -85,7 +85,7 @@ class Operation
     #[ORM\Column]
     private ?bool $alaune = null;
 
-    #[ORM\OneToMany(mappedBy: 'outil', targetEntity: StatUser::class)]
+    #[ORM\OneToMany(mappedBy: 'outil', targetEntity: StatUser::class, cascade: ['remove'])]
     private Collection $statUsers;
 
 
