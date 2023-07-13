@@ -39,34 +39,33 @@
             {% endfor %}
         </div>
         {% if opeAlaune %}
-            <div class="alaune">
-                <h2>Nouveauté</h2>
-                <a href="/operation/{{ opeAlaune.slug }}" class="alaune">
-                    <figure >
-                        <img src="{{ asset(image_dir ~ 'operations/' ~ opeAlaune.visuel) | imagine_filter('slide')  }}"alt="{{ opeAlaune.titre }}"/>
-                    </figure>
-                    <div class="bloc">
+        <div class="nouveaute">
+            <h2>Nouveauté</h2>
+            <a href="/operation/{{ opeAlaune.slug }}" class="alaune">
+                <figure >
+                    <img src="{{ asset(image_dir ~ 'operations/' ~ opeAlaune.visuel) | imagine_filter('slide')  }}"alt="{{ opeAlaune.titre }}"/>
+                </figure>
+                <div class="bloc">
 
-                        <div class="title_dates">
-                            <h4>{{ opeAlaune.titre }}</h4><br>
-                            <div class="dates">
-                                <span class="smallcaps">du</span><br>{{ opeAlaune.dateDebut|date('d/m') }}<br>
-                                <span class="smallcaps">au</span><br>{{ opeAlaune.dateFin|date('d/m') }}
-                            </div>
-
-                        </div>
-                        <div class="marques">
-                            {% for marque in opeAlaune.marques %}
-                                <figure class="logo">
-                                    <img src="{{ asset(image_dir ~ 'marques/' ~ marque.logo)   }}"alt="{{ marque.nom }}"/>
-                                </figure>
-                            {% endfor %}
+                    <div class="title_dates">
+                        <h4>{{ opeAlaune.titre }}</h4><br>
+                        <div class="dates">
+                            <span class="smallcaps">du</span><br>{{ opeAlaune.dateDebut|date('d/m') }}<br>
+                            <span class="smallcaps">au</span><br>{{ opeAlaune.dateFin|date('d/m') }}
                         </div>
 
                     </div>
-                </a>
-            </div>
+                    <div class="marques">
+                        {% for marque in opeAlaune.marques %}
+                            <figure class="logo">
+                                <img src="{{ asset(image_dir ~ 'marques/' ~ marque.logo)   }}"alt="{{ marque.nom }}"/>
+                            </figure>
+                        {% endfor %}
+                    </div>
 
+                </div>
+            </a>
+        </div>
         {% endif %}
     </section>
 {% endblock %}
